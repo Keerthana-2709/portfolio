@@ -1,0 +1,67 @@
+/* Section Background */
+.testimonials {
+  background: linear-gradient(135deg, #0a2a5e 0%, #003d5c 100%);
+  padding: 80px 40px;
+  color: #fff;
+}
+
+/* Title */
+.testimonials-title {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+}
+
+/* Grid Layout */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Card Styling */
+.testimonial-card {
+  padding: 50px 40px;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 350px;
+}
+
+.testimonial-card:last-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Quote Text */
+.testimonial-card p {
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* Name */
+.testimonial-card h3 {
+  margin-top: 40px;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+
+@media (max-width: 992px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+  }
+}
