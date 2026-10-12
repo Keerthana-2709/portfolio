@@ -1,0 +1,312 @@
+.portfolio-section {
+  padding: 80px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-size: 42px;
+  color: #1e1e1e;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-heading p {
+  color: #777;
+  font-size: 18px;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  display: block;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.project-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  transition: 0.6s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.15)
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 25px;
+}
+
+.overlay h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Dots */
+.swiper-pagination {
+  margin-top: 25px;
+  position: relative !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #c5c5c5;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 35px;
+  border-radius: 20px;
+}
+
+.project-card-2d,
+.project-card-elevation,
+.project-card-interior,
+.project-card-3d {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 240ms ease;
+}
+
+.project-designs-gallery {
+  min-height: calc(100vh - 80px);
+  padding: 72px 8%;
+  background:
+    radial-gradient(ellipse at 12% 5%, rgba(199, 210, 254, 0.55), transparent 36%),
+    radial-gradient(ellipse at 92% 88%, rgba(221, 214, 254, 0.45), transparent 32%),
+    #f7f8fc;
+}
+
+.project-designs-heading {
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.project-designs-heading span {
+  color: #667eea;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.project-designs-heading h1 {
+  margin: 10px 0;
+  color: #20243a;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+}
+
+.project-designs-heading p {
+  margin: 0;
+  color: #73778a;
+  font-size: 16px;
+}
+
+.project-designs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  width: min(100%, 1100px);
+  margin: 0 auto;
+}
+
+.project-card-2d-button,
+.project-card-interior-button,
+.project-card-elevation-button,
+.project-card-3d-button {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 18px;
+  background: #fff;
+  cursor: zoom-in;
+  box-shadow: 0 12px 32px rgba(35, 42, 75, 0.12);
+  text-align: left;
+  transition: box-shadow 220ms ease, transform 220ms ease;
+}
+
+.project-card-2d-button:hover,
+.project-card-interior-button:hover,
+.project-card-elevation-button:hover,
+.project-card-3d-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(35, 42, 75, 0.18);
+}
+
+.project-card-2d-button:hover .project-card-2d,
+.project-card-interior-button:hover .project-card-interior,
+.project-card-elevation-button:hover .project-card-elevation,
+.project-card-3d-button:hover .project-card-3d {
+  transform: scale(1.04);
+}
+
+.project-card-2d-caption, 
+.project-card-interior-caption, 
+.project-card-elevation-caption, 
+.project-card-3d-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 34px 22px 18px;
+  background: linear-gradient(transparent, rgba(20, 24, 43, 0.76));
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.project-card-2d-button:focus-visible,
+.project-card-interior-button:focus-visible,
+.project-card-elevation-button:focus-visible,
+.project-card-3d-button:focus-visible,
+.image-preview-close:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 4px;
+}
+
+.image-preview-backdrop {
+  position: fixed;
+  z-index: 1100;
+  inset: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.82);
+}
+
+.image-preview-dialog {
+  position: relative;
+  width: max-content;
+  height: max-content;
+  margin: 24px auto;
+}
+
+.image-preview-dialog img {
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: width 180ms ease;
+}
+
+.image-preview-close {
+  position: fixed;
+  z-index: 1;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.image-preview-controls {
+  position: fixed;
+  z-index: 1;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: rgba(20, 20, 20, 0.78);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.image-preview-controls button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.image-preview-controls button:not(:disabled):hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.08);
+}
+
+.image-preview-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.image-preview-controls button:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .project-designs-gallery {
+    padding: 52px 6%;
+  }
+
+  .project-designs-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card-2d-button,
+  .project-card-interior-button,
+  .project-card-elevation-button,
+  .project-card-3d-button {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card-2d-button,
+  .project-card-interior-button,
+  .project-card-elevation-button,
+  .project-card-3d-button {
+    height: 240px;
+  }
+}
