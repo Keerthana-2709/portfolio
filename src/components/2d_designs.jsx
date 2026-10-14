@@ -5,13 +5,27 @@ const plans = [
   {
     id: 1,
     title: "2D Design Plan",
-    image: "/2d_designs_view.png",
+    image: "/2d_designs_view_1.png",
+  },
+  {
+    id: 2,
+    title: "2D Design Plan",
+    image: "/2d_designs_view_2.png",
+  },
+  {
+    id: 3,
+    title: "2D Design Plan",
+    image: "/2d_designs_view_3.png",
   },
 ];
 
 export default function TwoDDesigns() {
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [zoom, setZoom] = useState(1);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const closePreview = () => {
     setSelectedPlan(null);

@@ -13,6 +13,10 @@ export default function ThreeDDesigns() {
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [zoom, setZoom] = useState(1);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const closePreview = () => {
     setSelectedPlan(null);
     setZoom(1);

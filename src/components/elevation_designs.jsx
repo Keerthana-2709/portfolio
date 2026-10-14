@@ -4,14 +4,28 @@ import "./projectGallery.css";
 const plans = [
   {
     id: 1,
-    title: "Elevation Design Plan",
-    image: "/elevation_designs_view.png",
+    title: "Dindigal Site Elevation",
+    image: "/elevation_designs_view_1.png",
+  },
+  {
+    id: 2,
+    title: "Mettupalayam Site Elevation",
+    image: "/elevation_designs_view_2.png",
+  },
+  {
+    id: 3,
+    title: "Mettupalayam Site Elevation 2",
+    image: "/elevation_designs_view_3.png",
   },
 ];
 
 export default function ElevationDesigns() {
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [zoom, setZoom] = useState(1);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const closePreview = () => {
     setSelectedPlan(null);
